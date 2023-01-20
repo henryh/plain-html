@@ -1,0 +1,9 @@
+services:
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./web:/var/www
+    ports:
+      - 8089:80
