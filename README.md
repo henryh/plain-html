@@ -8,4 +8,4 @@ The simple web server in Docker for a static web page
 - `make up` - start server
 - `make down` - stop server
 - `make exec` - go to the server console
-- `make log` - view server log
+- `make logs` - view server logs
