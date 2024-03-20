@@ -1,9 +1,13 @@
+version: "3.6"
+
 services:
 
   nginx:
     image: nginx:alpine
+    platform: linux/amd64
+    working_dir: /opt/front
     volumes:
-      - ./nginx:/etc/nginx/conf.d
-      - ./web:/var/www
+      - ./config:/etc/nginx/conf.d
+      - ./app:/var/www
     ports:
-      - 8089:80
+      - ${APP_PORT}:80
