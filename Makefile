@@ -11,6 +11,8 @@ check_env:
 up:
 	@make down
 	docker-compose up -d --build
+restart:
+	@make up
 down:
 	docker-compose down --remove-orphans
 bash:
